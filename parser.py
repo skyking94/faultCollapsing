@@ -86,6 +86,11 @@ def get_level_inv(current_level, input1, input_list):
         update_level = current_level + 1
         return update_level
 
+# 0, 1, 2, and 3 are used as pointers for current remaining stuck-at faults for a wire
+# 0 - both stuck-at-1 and stuck-at-0
+# 1 - only stuck-at-1
+# 2 - only stuck-at-0
+# 3 - none
 def equivalence_check(in_list):
     if 'NAND2X1' in in_list:
         if in_list[6] == 0:
